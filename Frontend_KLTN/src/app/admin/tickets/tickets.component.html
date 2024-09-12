@@ -1,0 +1,57 @@
+<section class="container mt-5 tickets_container" style="background-color: transparent;">
+  <div class="tool_selector d-flex justify-content-between mb-3">
+    <div class="select_all d-flex align-items-center " style="gap:8px;">
+      <input type="checkbox" class="select_all_check" name="select_all_check" style="height:20px;width: 16px;">
+      <label for="select_all_check">Select all</label>
+    </div>
+    <div class="filter_export_container">
+      <div class="export_table d-flex" style="gap: 16px;">
+        <button type="button" (click)="AddTicket()">+ Add Ticket</button>
+        <button type="button" (click)="refreshItemList()"><fa-icon [icon]="faSyncAlt"
+            style="margin-right: 8px;"></fa-icon>Refresh</button>
+      </div>
+      <div class="filter_ticket">
+
+      </div>
+    </div>
+  </div>
+  <!-- <div *ngIf="loading" class="table-wrapper" style="position: relative;">
+    <div class="spinner-wrapper">
+      <div class="spinner-border" role="status">
+        <span class="sr-only"></span>
+      </div>
+    </div>
+  </div> -->
+
+  <table class="table table-bordered table-striped" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+    <thead>
+      <tr>
+        <th scope="col" [ngClass]="getSortClass('id')" (click)="sort('id')">ID</th>
+        <th scope="col" [ngClass]="getSortClass('subject')" (click)="sort('subject')">Subject</th>
+        <th scope="col" [ngClass]="getSortClass('requester')" (click)="sort('requester')">Requester</th>
+        <!-- <th scope="col" [ngClass]="getSortClass('type')" (click)="sort('type')">Type</th> -->
+        <th scope="col" [ngClass]="getSortClass('description')" (click)="sort('description')">Description</th>
+        <th scope="col" [ngClass]="getSortClass('status')" (click)="sort('status')">Status</th>
+        <th scope="col" [ngClass]="getSortClass('priority')" (click)="sort('priority')">Priority</th>
+        <th scope="col" [ngClass]="getSortClass('receiver')" (click)="sort('receiver')">Assigned to</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of filteredItems; let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{item.subject}}</td>
+        <td>{{item.requester}}</td>
+        <!-- <td>{{item.type}}</td> -->
+        <td>{{item.description}}</td>
+        <td>{{getStatusLabel(item.status)}}</td>
+        <td>{{getPriorityLabel(item.priority)}}</td>
+        <td>{{item.receiver}}</td>
+        <td class="d-flex" style="gap: 6px; border: none;">
+          <button class="delete-btn btn btn-danger" (click)="openDeleteConfirmation(item.id)"><svg width="13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#fff" d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.7 23.7 0 0 0 -21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0 -16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"/></svg></button>
+          <button class="delete-btn btn btn-primary" (click)="openUpdateModal(item.id)"><svg width="13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#fff" d="M290.7 93.2l128 128-278 278-114.1 12.6C11.4 513.5-1.6 500.6 .1 485.3l12.7-114.2 277.9-277.9zm207.2-19.1l-60.1-60.1c-18.8-18.8-49.2-18.8-67.9 0l-56.6 56.6 128 128 56.6-56.6c18.8-18.8 18.8-49.2 0-67.9z"/></svg></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

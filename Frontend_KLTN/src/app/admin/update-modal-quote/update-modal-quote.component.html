@@ -1,0 +1,58 @@
+<section class="new_ticket_container container mt-3 mb-3" style="background-color: #fff;">
+    <form class="form-control d-flex flex-column justify-content-center new_ticket_form w-100 border-0">
+        <h4 class="mb-2 mt-2">New Quote</h4>
+        <div class="form-group d-flex flex-column">
+            <label for="subject">Subject <span class="text-danger">(*)</span></label>
+            <input type="text" name="subject" class="new_ticket_form__input w-75" [(ngModel)]="subject">
+        </div>
+
+        <div class="form-group d-flex flex-column">
+            <label for="description">Description <span class="text-danger">(*)</span></label>
+            <input type="text" name="description" class="new_ticket_form__input w-75" [(ngModel)]="description">
+        </div>
+
+        <div class="form-group d-flex flex-column">
+            <label for="billingAddress">Billing Address <span class="text-danger">(*)</span></label>
+            <input type="text" name="billingAddress" class="new_ticket_form__input w-75" [(ngModel)]="billingAddress">
+        </div>
+
+        <div class="form-group d-flex flex-column">
+            <label for="shippingAddress"> Shipping Address <span class="text-danger">(*)</span></label>
+            <input type="text" name="shippingAddress" class="new_ticket_form__input w-75" [(ngModel)]="shippingAddress">
+        </div>
+
+        <div class="form-group d-flex flex-column">
+            <label for="discountPercent"> Discount Percent <span class="text-danger">(*)</span></label>
+            <input type="text" name="discountPercent" class="new_ticket_form__input w-75" [(ngModel)]="discountPercent">
+        </div>
+
+        <div class="form-group d-flex flex-column">
+            <label for="discountAmount"> Discount Amount <span class="text-danger">(*)</span></label>
+            <input type="text" name="discountAmount" class="new_ticket_form__input w-75" [(ngModel)]="discountAmount">
+        </div>
+
+        <div class="form-group d-flex flex-column">
+            <label for="taxAmount">Tax Amount <span class="text-danger">(*)</span></label>
+            <input type="text" name="taxAmount" class="new_ticket_form__input w-75" [(ngModel)]="taxAmount">
+        </div>
+
+        <div class="form-group d-flex flex-column">
+            <label for="adjustmentAmount">Adjustment Amount <span class="text-danger">(*)</span></label>
+            <input type="text" name="adjustmentAmount" class="new_ticket_form__input w-75" [(ngModel)]="adjustmentAmount">
+        </div>
+
+        <div class="form-group d-flex flex-column">
+            <label for="subTotal">Subtotal <span class="text-danger">(*)</span></label>
+            <input type="text" name="subTotal" class="new_ticket_form__input w-75" [(ngModel)]="subTotal">
+        </div>
+
+        <div class="form-group d-flex flex-column">
+            <label for="grandTotal">Grandtotal <span class="text-danger">(*)</span></label>
+            <input type="text" name="grandTotal" class="new_ticket_form__input w-75" [(ngModel)]="grandTotal">
+        </div>
+        
+        <div class="form-group d-flex justify-content-start">
+            <button type="button" class="submit_new_ticket_btn" (click)="updateQuote()">Save</button>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,56 @@
+<section class="container mt-5 tickets_container " style="background-color: transparent;">
+    <div class="tool_selector d-flex justify-content-between mb-3">
+        <div class="select_all d-flex align-items-center " style="gap:8px;">
+            <input type="checkbox" class="select_all_check" name="select_all_check" style="height:20px;width: 16px;">
+            <label for="select_all_check">Select all</label> 
+        </div>
+        <div class="filter_export_container">
+            <div class="export_table d-flex" style="gap:16px;">
+                <button type="button"  (click)="AddCustomer()">+ Add Customer</button>
+                <button type="button"  (click)="refreshItemList()"><fa-icon [icon]="faSyncAlt" style="margin-right: 8px;"></fa-icon> Refresh</button>
+            </div>
+            <div class="filter_ticket">
+
+            </div>
+        </div>
+    </div>
+    <table class="table table-bordered table-striped" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+        <thead>
+            <tr>
+                <th scope="col" [ngClass]="getSortClass('id')" (click)="sort('id')">ID</th>
+                <th scope="col" [ngClass]="getSortClass('title')" (click)="sort('title')">Title</th>
+                <th scope="col" [ngClass]="getSortClass('description')" (click)="sort('description')">Description</th>
+                <th scope="col" [ngClass]="getSortClass('leadValue')" (click)="sort('leadValue')">Customer's Value</th>
+                <th scope="col" [ngClass]="getSortClass('status')" (click)="sort('status')">Status</th>
+                <!-- <th scope="col" [ngClass]="getSortClass('score')" (click)="sort('score')">Score</th> -->
+                <th scope="col" [ngClass]="getSortClass('lostReason')" (click)="sort('lostReason')">Lost Reason</th>
+                <th scope="col" [ngClass]="getSortClass('personName')" (click)="sort('personName')">Customer's name</th>
+                <th scope="col" [ngClass]="getSortClass('email')" (click)="sort('email')">Customer's email</th>
+                <th scope="col" [ngClass]="getSortClass('contactNumbers')" (click)="sort('contactNumbers')">Customer's phone</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of filteredItems;let i = index">
+                <td><a href="#">{{i+1}}</a></td>
+                <td><a>{{item.title}}</a></td>
+                <td>{{item.description}}</td>
+                <td>{{item.contactValue}}</td>
+                <td>{{item.status}}</td>
+                <!-- <td>{{item.score}}</td> -->
+                <td>{{item.lostReason}}</td>
+                <td>{{item.personName}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.contactNumbers}}</td>
+                <td class="d-flex" style="gap: 6px;border: none;flex-wrap: wrap;">
+                    <button class="delete-btn btn btn-danger" (click)="openDeleteConfirmation(item.id)"><svg width="13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.7 23.7 0 0 0 -21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0 -16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"/></svg></button>
+                    <button class="delete-btn btn btn-primary"
+                    (click)="openUpdateInfoModal(item.personId, item.id, 'update_customer_info')"><svg width="13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#fff" d="M290.7 93.2l128 128-278 278-114.1 12.6C11.4 513.5-1.6 500.6 .1 485.3l12.7-114.2 277.9-277.9zm207.2-19.1l-60.1-60.1c-18.8-18.8-49.2-18.8-67.9 0l-56.6 56.6 128 128 56.6-56.6c18.8-18.8 18.8-49.2 0-67.9z"/></svg></button>
+                    <button class="delete-btn btn btn-primary"
+                    (click)="openUpdateInfoModal(item.personId, item.id, 'update_contact_info')"><svg width="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="#fff" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h274.9c-2.4-6.8-3.4-14-2.6-21.3l6.8-60.9 1.2-11.1 7.9-7.9 77.3-77.3c-24.5-27.7-60-45.5-99.9-45.5zm45.3 145.3l-6.8 61c-1.1 10.2 7.5 18.8 17.6 17.6l60.9-6.8 137.9-137.9-71.7-71.7-137.9 137.8zM633 268.9L595.1 231c-9.3-9.3-24.5-9.3-33.8 0l-37.8 37.8-4.1 4.1 71.8 71.7 41.8-41.8c9.3-9.4 9.3-24.5 0-33.9z"/></svg></button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</section>

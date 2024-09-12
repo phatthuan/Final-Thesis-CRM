@@ -1,0 +1,120 @@
+.index_container {
+  background: linear-gradient(rgb(7, 6, 36) -17.19%, rgba(7, 6, 36, 0) 111.4%), linear-gradient(86.97deg, rgba(255, 168, 0, 0.4) -0.67%, rgba(25, 187, 125, 0.4) 24.91%, rgba(0, 82, 204, 0.4) 48.82%, rgba(69, 164, 236, 0.4) 72.18%, rgba(184, 95, 255, 0.4) 88.31%), rgb(7, 6, 36);
+}
+.index_container .hero_banner_content_left {
+  gap: 16px;
+}
+.index_container .hero_banner_content_left_text {
+  gap: 16px;
+}
+.index_container .hero_banner_content_left_text h1 {
+  font-size: 4.5rem;
+  line-height: 5.625rem;
+  font-weight: bold;
+  color: #fff;
+}
+.index_container .hero_banner_content_left_text h1 span {
+  background: linear-gradient(90.05deg, rgb(181, 255, 211) 0.02%, rgb(209, 164, 255) 39.16%, rgb(255, 165, 175) 75.82%, rgb(255, 220, 164) 112%) text;
+  -webkit-text-fill-color: transparent;
+}
+.index_container .hero_banner_content_left_text h4 {
+  color: #fff;
+  font-size: 20px;
+}
+.index_container .hero_banner_content_left_button {
+  gap: 16px;
+}
+.index_container .hero_banner_content_left_button button {
+  color: #fff;
+  padding: 16px;
+  background-color: rgb(173, 76, 248);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.index_container .hero_banner_content_left_button button:hover {
+  background-color: rgb(115, 12, 194);
+}
+.index_container .hero_banner_content_left_button a {
+  color: #fff;
+}
+.index_container .hero_banner_content_left_button a:hover {
+  color: #ebe9e9;
+}
+.index_container .hero_banner_sponsor {
+  padding-top: 36px;
+  gap: 32px;
+}
+.index_container .hero_banner_sponsor_title {
+  color: #fff;
+  text-align: center;
+}
+.index_container .hero_banner_sponsor_list {
+  gap: 48px;
+}
+
+.happy-customer {
+  background-color: #fff;
+  padding: 80px 64px;
+  gap: 32px;
+}
+.happy-customer-title {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 4.5rem;
+  text-align: center;
+}
+.happy-customer-description {
+  font-size: 2rem;
+  text-align: center;
+  color: #707070;
+  line-height: 40px;
+}
+.happy-customer-services {
+  gap: 32px;
+}
+.happy-customer-services-btn {
+  border: 2px solid rgba(133, 18, 224, 0.5);
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #fff;
+  min-width: 164px;
+  font-weight: bold;
+}
+.happy-customer-services-btn:hover {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+.customer-feedback {
+  background-color: #fff;
+  padding: 80px 64px;
+}
+.customer-feedback-title {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 4.5rem;
+  text-align: center;
+}
+.customer-feedback-card {
+  background-color: rgb(255, 224, 174);
+  padding: 48px;
+  border-radius: 8px;
+}
+.customer-feedback-desc {
+  font-size: 1.5rem;
+  line-height: 38px;
+}
+.customer-feedback-text {
+  gap: 28px;
+}
+.customer-feedback-info {
+  gap: 20px;
+}
+.customer-feedback .customer-name {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.customer-feedback .customer-address {
+  font-size: 1.25rem;
+}/*# sourceMappingURL=index.component.css.map */

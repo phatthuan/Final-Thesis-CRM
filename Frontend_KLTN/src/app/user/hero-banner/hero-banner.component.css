@@ -1,0 +1,21 @@
+.hero_banner {
+  height: 400px;
+  background-image: linear-gradient(rgba(97, 115, 187, 0.7), rgba(57, 70, 122, 0.7)), url("../../../assets/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  gap: 24px;
+}
+.hero_banner__title {
+  color: #fff;
+}
+.hero_banner__search input {
+  width: 500px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+.hero_banner__search input:focus {
+  border: 1px solid #062d2d;
+}/*# sourceMappingURL=hero-banner.component.css.map */

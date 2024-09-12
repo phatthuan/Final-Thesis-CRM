@@ -1,0 +1,47 @@
+<section class="container mt-5 tickets_container" style="background-color: transparent;">
+  <div class="tool_selector d-flex justify-content-between mb-3">
+    <div class="select_all d-flex align-items-center " style="gap:8px;">
+      <input type="checkbox" class="select_all_check" name="select_all_check" style="height:20px;width: 16px;">
+      <label for="select_all_check">Select all</label>
+    </div>
+    <div class="filter_export_container">
+      <div class="filter_export_container">
+        <div class="export_table d-flex" style="gap:16px;">
+          <!-- <button type="button">+ Add Quote</button> -->
+          <button type="button" (click)="SendPaymentEmail()">+ Send Payment's email</button>
+          <button type="button" (click)="goToPayment()">+ Go to Payment</button>
+        </div>
+        <div class="filter_ticket">
+
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div *ngIf="loading" class="table-wrapper" style="position: relative;">
+    <div class="spinner-wrapper">
+      <div class="spinner-border" role="status">
+        <span class="sr-only"></span>
+      </div>
+    </div>
+  </div> 
+  <table class="table table-bordered table-striped" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+    <thead>
+      <tr>
+        <th scope="col" [ngClass]="getSortClass('id')" (click)="sort('id')">ID</th>
+        <th scope="col" [ngClass]="getSortClass('subject')" (click)="sort('subject')">Subject</th>
+        <th scope="col" [ngClass]="getSortClass('description')" (click)="sort('description')">Description</th>
+        <th scope="col" [ngClass]="getSortClass('grandTotal')" (click)="sort('grandTotal')">GrandTotal</th>
+        <th scope="col" [ngClass]="getSortClass('expiredAt')" (click)="sort('expiredAt')">Created At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items;let i = index">
+        <td>{{i+1}}</td>
+        <td>{{item.subject}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.grandTotal}}</td>
+        <td>{{item.createdAt}}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

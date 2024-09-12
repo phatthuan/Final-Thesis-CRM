@@ -1,0 +1,144 @@
+.form-control {
+  border: none;
+}
+
+p {
+  margin: 0;
+}
+
+.signup_component {
+  background: linear-gradient(270deg, rgb(143, 217, 221), rgb(232, 250, 255));
+  padding: 80px;
+}
+.signup_component_image {
+  position: absolute;
+  z-index: 9;
+}
+.signup_component_image:first-child {
+  left: -5%;
+  top: 20%;
+}
+.signup_component_image:nth-child(2) {
+  top: 50%;
+}
+.signup_component_text {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  padding-top: 64px;
+  padding-left: 48px;
+  padding-bottom: 72px;
+  position: relative;
+}
+.signup_component_text .logo {
+  gap: 32px;
+}
+.signup_component__container {
+  gap: 64px;
+  position: relative;
+  width: 100%;
+  border-radius: 32px;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.5);
+  background: linear-gradient(90deg, rgb(176, 216, 218), rgb(232, 250, 255));
+}
+.signup_component__container form {
+  padding: 32px 64px;
+  border-radius: 32px;
+  padding: 89px 160px;
+}
+.signup_component__form {
+  width: 90%;
+  gap: 32px;
+}
+.signup_component__form .form-group {
+  gap: 8px;
+  padding-bottom: 8px;
+  position: relative;
+}
+.signup_component__form .form-group::after {
+  content: "";
+  position: absolute;
+  background-color: #ccc;
+  height: 2px;
+  width: 100%;
+  border-radius: 5px;
+  top: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.signup_component__form .form-group .form_icon {
+  transition: all 0.5s ease-in-out;
+}
+.signup_component__form .form-group .form-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ccc;
+  z-index: 999;
+  position: absolute;
+  padding-left: 20px;
+  top: 10%;
+  transition: all 0.5s ease-in-out;
+}
+.signup_component__form .form-group .form_input_container {
+  position: relative;
+}
+.signup_component__form .form-group.focused::after {
+  background-color: rgb(77, 246, 170);
+}
+.signup_component__form .form-group.focused .form_icon {
+  color: rgb(77, 246, 170);
+}
+.signup_component__form .form-group.focused .form-label {
+  top: calc(100% - 60px);
+  color: rgb(77, 246, 170);
+}
+.signup_component__form .form-group.error::after {
+  background-color: red;
+}
+.signup_component__form .form-group.error .form_icon {
+  color: red;
+}
+.signup_component__form .form-group.error .form-label {
+  top: calc(100% - 60px);
+  color: red;
+}
+.signup_component__form__input {
+  padding: 4px 8px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+}
+.signup_component__form h4 {
+  font-size: 28px;
+  font-weight: bold;
+}
+.signup_component__btn_submit, .signup_component__btn_cancel {
+  border-radius: 8px;
+  padding: 8px;
+  border: none;
+  outline: none;
+  background-color: rgb(138, 203, 206);
+  color: white;
+  font-weight: 700;
+}
+.signup_component__btn_submit:hover, .signup_component__btn_cancel:hover {
+  background-color: rgb(104, 160, 163);
+}
+.signup_component .error-text {
+  color: red;
+  font-size: 16px;
+}
+.signup_component .already_account {
+  gap: 8px;
+}
+.signup_component .already_account p {
+  font-weight: 700;
+  color: #909090;
+}
+.signup_component .already_account a {
+  text-decoration: none;
+  color: rgb(138, 203, 206);
+}
+.signup_component .already_account a:hover {
+  color: rgb(121, 180, 183);
+  text-decoration: underline;
+}/*# sourceMappingURL=signup.component.css.map */

@@ -1,0 +1,25 @@
+<section class="new_ticket_container container mt-3 mb-3" style="background-color: #fff;">
+    <form class="form-control d-flex flex-column justify-content-center new_ticket_form w-100 border-0">
+        <h4 class="mb-2 mt-2">New Ticket</h4>
+        <div class="form-group d-flex flex-column">
+            <label for="ticketName">Subject <span class="text-danger">(*)</span></label>
+            <input type="text" name="ticketName" class="new_ticket_form__input w-75" [(ngModel)]="ticketName">
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="type">Type <span class="text-danger">(*)</span></label>
+            <select name="type" class="new_ticket_form__input w-75" [(ngModel)]="type">
+                <option value="Default" [selected]="type === 'Default'" disabled hidden>Select a type</option>
+                <option value="Request" [selected]="type === 'Request'">Request</option>
+                <option value="Support" [selected]="type === 'Support'">Support</option>
+            </select>
+        </div>        
+        <div class="form-group d-flex flex-column">
+            <label for="description">Description<span class="text-danger">(*)</span></label>
+            <textarea type="text" name="description" class="new_ticket_form__input w-75" [(ngModel)]="description" cols="30" rows="10" style="resize: none;"></textarea>
+        </div>
+        <div class="form-group d-flex justify-content-end">
+            <button type="button" class="submit_new_ticket_btn" (click)="addTicket()">Submit</button>
+            <button class="cancel_new_ticket_btn" (click)="activeModal.dismiss('Cross click')">Cancel</button>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,86 @@
+<section class="new_ticket_container container mt-3 mb-3" style="background-color: #fff;">
+    <form class="form-control d-flex flex-column justify-content-center new_ticket_form w-75">
+        <h4 class="mb-2 mt-2">New Incident</h4>
+        <div class="form-group d-flex flex-column">
+            <label for="requester">Requester <span class="text-danger">(*)</span></label>
+            <input type="text" name="requester" class="new_ticket_form__input w-75" >
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="subject">Subject <span class="text-danger">(*)</span></label>
+            <input type="text" name="subject" class="new_ticket_form__input w-75">
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="source">Source <span class="text-danger">(*)</span></label>
+            <select name="source" id="source" class="w-75">
+                <option value="Phone" selected>Phone</option>
+                <option value="Email">Email</option>
+                <option value="Portal">Portal</option>
+                <option value="Chat">Chat</option>
+                <option value="MS Team">MS Team</option>
+            </select>
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="status">Status <span class="text-danger">(*)</span></label>
+            <select name="status" id="status" class="w-75">
+                <option value="Open" selected>Phone</option>
+                <option value="Pending">Email</option>
+                <option value="Resolved">Portal</option>
+                <option value="Closed">Chat</option>
+            </select>
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="priority">Priority <span class="text-danger">(*)</span></label>
+            <select name="priority" id="priority" class="w-75">
+                <option value="Low" selected>Low</option>
+                <option value="Normal">Normal</option>
+                <option value="High">High</option>
+                <option value="Urgent">Urgent</option>
+            </select>
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="group">Group <span class="text-danger">(*)</span></label>
+            <select name="group" id="group" class="w-75">
+                <option value="Team A" selected>Team A</option>
+                <option value="Team B">Team B</option>
+                <option value="Team C">Team C</option>
+                <option value="Team D">Team D</option>
+            </select>
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="agent">Agent <span class="text-danger">(*)</span></label>
+            <select name="agent" id="agent" class="w-75">
+                <option value="Gia Phat" selected>Gia Phat</option>
+                <option value="Thuan Phat">Thuan Phat</option>
+                <option value="Van A">Van A</option>
+                <option value="Le B">Le B</option>
+            </select>
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="department">Department <span class="text-danger">(*)</span></label>
+            <select name="department" id="department" class="w-75">
+                <option value="Marketing" selected>Marketing</option>
+                <option value="IT">IT</option>
+                <option value="Human Resources">Human Resources</option>
+                <option value="Customer Support">Customer Support</option>
+            </select>
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="description">Description <span class="text-danger">(*)</span></label>
+            <textarea name="description" id="description" cols="30" rows="10" style="resize: none;"></textarea>
+        </div>
+        <div class="form-group d-flex flex-column w-25">
+            <label for="start_date">Planned Start Date</label>
+            <input type="date" name="start_date" id="start_date " >
+        </div>
+        <div class="form-group d-flex flex-column w-25">
+            <label for="end_date">Planned End Date</label>
+            <input type="date" name="end_date" id="end_date">
+        </div>
+        
+        <div class="form-group d-flex justify-content-end">
+            <button type="submit" class="submit_new_ticket_btn">Submit</button>
+            <button class="cancel_new_ticket_btn">Cancel</button>
+        </div>
+
+    </form>
+</section>

@@ -1,0 +1,170 @@
+.form-control {
+    border: none;
+}
+
+p {
+    margin: 0;
+}
+
+.signup_component {
+    background: linear-gradient(270deg, rgba(143, 217, 221), rgba(232, 250, 255));
+    padding: 80px;
+    &_image {
+        position: absolute;
+        z-index: 9;
+        &:first-child{
+            left: -5%;
+            top: 20%;
+        }
+        &:nth-child(2){
+            top: 50%;
+        }
+    }
+
+    &_text{
+        font-size: 24px;
+        font-weight: 600;
+        color: #fff;
+        padding-top: 64px;
+        padding-left: 48px;
+        padding-bottom: 72px;
+        position: relative;
+        line-height: 2rem;
+        .logo{
+            gap: 32px;
+        }
+    }
+
+    &__container {
+        gap: 64px;
+        position: relative;
+        width: 100%;
+        border-radius: 32px;
+        box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+        background: linear-gradient(90deg, rgba(176, 216, 218), rgba(232, 250, 255));
+        form {
+            padding: 32px 64px;
+            border-radius: 32px;
+            padding: 89px 160px;
+        }
+    }
+    &__form {
+        width: 90%;
+        gap: 32px;
+        .form-group {
+            gap: 8px;
+            padding-bottom: 8px;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: #ccc;
+                height: 2px;
+                width: 100%;
+                border-radius: 5px;
+                top: 100%;
+                transition: all 0.5s ease-in-out;
+            }
+
+            .form_icon {
+                transition: all 0.5s ease-in-out;
+            }
+
+            .form-label {
+                font-size: 16px;
+                font-weight: 500;
+                color: #ccc;
+                z-index: 999;
+                position: absolute;
+                padding-left: 20px;
+                top: 10%;
+                transition: all 0.5s ease-in-out;
+            }
+
+            .form_input_container {
+                position: relative;
+            }
+
+            &.focused {
+                &::after {
+                    background-color: rgb(77, 246, 170);
+                }
+
+                .form_icon {
+                    color: rgb(77, 246, 170);
+                }
+
+                .form-label {
+                    top: calc(100% - 60px);
+                    color: rgb(77, 246, 170);
+                }
+            }
+
+            &.error{
+                &::after {
+                    background-color: red;
+                }
+
+                .form_icon {
+                    color: red;
+                }
+
+                .form-label {
+                    top: calc(100% - 60px);
+                    color: red;
+                }
+            }
+        }
+
+        &__input {
+            padding: 4px 8px;
+            outline: none;
+            border: none;
+            font-size: 16px;
+        }
+
+        h4 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+    }
+
+    &__btn {
+        &_submit,
+        &_cancel {
+            border-radius: 8px;
+            padding: 8px;
+            border: none;
+            outline: none;
+            background-color: rgb(138, 203, 206);
+            color: white;
+            font-weight: 700;
+
+            &:hover{
+                background-color: rgb(104, 160, 163);
+            }
+        }
+    }
+
+    .error-text{
+        color: red;
+        font-size: 16px;
+    }
+
+    .already_account{
+        gap: 8px;
+        p{
+            font-weight: 500;
+            color: #4f4f4f;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(138, 203, 206);
+
+            &:hover{
+                color: rgb(121, 180, 183); 
+                text-decoration: underline;
+            }
+        }
+    }
+}

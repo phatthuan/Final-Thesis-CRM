@@ -1,0 +1,59 @@
+.service_catalog_component{
+    a{
+        cursor: pointer;
+    }
+    
+    &__introduction{
+        background-color: #F5F7F9;
+        padding: 16px;
+        border-radius: 8px 8px 0 0;
+
+        &__content{
+            gap: 4px;
+        }
+
+        &__title{
+            font-size: 24px;
+        }
+
+        &__desc{
+            font-size: 16px;
+        }
+    }
+
+    &__items{
+        background-color: #fff;
+        &__category{
+            gap: 8px;
+            padding: 0 20px;
+            li{
+                border-radius: 8px;
+                padding: 8px;
+                font-size: 20px;
+                &.active{
+                    background-color: #82a3f9;
+                }
+            }
+        }
+    }
+
+    &__item{
+        background-color: #fff;
+        width: 30%;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+
+        &:hover{
+            background-color: #e0dede;
+        }
+
+        &__title,
+        &__desc{
+            color: #333;
+            gap: 4px;
+            font-size: 16px;
+        }
+    }
+}

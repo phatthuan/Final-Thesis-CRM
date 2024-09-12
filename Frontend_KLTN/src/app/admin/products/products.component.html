@@ -1,0 +1,51 @@
+<section class="container mt-5 tickets_container" style="background-color: transparent;">
+  <div class="tool_selector d-flex justify-content-between mb-3">
+    <div class="select_all d-flex align-items-center " style="gap:8px;">
+      <input type="checkbox" class="select_all_check" name="select_all_check" style="height:20px;width: 16px;">
+      <label for="select_all_check">Select all</label>
+    </div>
+    <div class="filter_export_container">
+      <div class="export_table">
+        <button type="button" (click)="AddProduct()">+ Add Product</button>
+      </div>
+      <div class="filter_ticket">
+
+      </div>
+    </div>
+  </div>
+  <!-- <div *ngIf="loading" class="table-wrapper" style="position: relative;">
+    <div class="spinner-wrapper">
+      <div class="spinner-border" role="status">
+        <span class="sr-only"></span>
+      </div>
+    </div>
+  </div> -->
+  <table class="table table-bordered table-striped" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col">imageFile</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of filteredItems;let i = index">
+        <td>{{i+1}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.quantity}}</td>
+        <td>{{item.price}}</td>
+        <td style="text-align: center;"><a [href]="getImagePath(item.imageFile)" target="_blank"><img width="80px" height="80px"
+              [src]="getImagePath(item.imageFile)" alt=""></a></td>
+        <td class="action-buttons-container" style="gap: 12px;border: none;">
+          <button class="btn btn btn-danger" (click)="openDeleteConfirmation(item.id)"><svg width="13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#fff" d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.7 23.7 0 0 0 -21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0 -16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"/></svg></button>
+          <button class="btn btn btn-primary" style="margin-left: 12px;" (click)="openUpdateModal(item.id)"><svg width="13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#fff" d="M290.7 93.2l128 128-278 278-114.1 12.6C11.4 513.5-1.6 500.6 .1 485.3l12.7-114.2 277.9-277.9zm207.2-19.1l-60.1-60.1c-18.8-18.8-49.2-18.8-67.9 0l-56.6 56.6 128 128 56.6-56.6c18.8-18.8 18.8-49.2 0-67.9z"/></svg></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

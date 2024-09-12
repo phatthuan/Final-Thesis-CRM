@@ -1,0 +1,38 @@
+<body>
+  <div class="container">
+    <div class="screen">
+      <div class="screen__content">
+        <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="login">
+          <div class="login__field">
+            <h2 *ngIf="pageType === 'it-service'">IT Services' Admin</h2>
+            <h2 *ngIf="pageType === 'crm'">CRM's Admin</h2>
+          </div>
+          <div class="login__field">
+            <i-tabler name="user" class="login__icon icon-18"></i-tabler>
+            <input type="text" class="login__input" placeholder="Username" name="username" required
+              [(ngModel)]="username" />
+          </div>
+          <div class="login__field">
+            <i-tabler name="lock" class="login__icon icon-18"></i-tabler>
+            <input id="password-field" type="password" class="form-control login__input" placeholder="Password"
+              name="password" required [(ngModel)]="password" />
+            <span (click)="togglePassword()" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+          </div>
+          <div *ngIf="loginFailed" class="error-message" style="color: red;">
+            {{ errorMessage }}
+          </div>
+          <button type="submit" class="button login__submit">
+            <span class="button__text">Log In Now</span>
+            <i-tabler name="chevron-right" class="button__icon icon-20"></i-tabler>
+          </button>
+        </form>
+      </div>
+      <div class="screen__background">
+        <span class="screen__background__shape screen__background__shape4"></span>
+        <span class="screen__background__shape screen__background__shape3"></span>
+        <span class="screen__background__shape screen__background__shape2"></span>
+        <span class="screen__background__shape screen__background__shape1"></span>
+      </div>
+    </div>
+  </div>
+</body>

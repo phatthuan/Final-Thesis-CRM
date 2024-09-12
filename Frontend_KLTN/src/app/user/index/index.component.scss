@@ -1,0 +1,237 @@
+.index_container {
+    background: linear-gradient(rgb(7, 6, 36) -17.19%, rgba(7, 6, 36, 0) 111.4%),
+        linear-gradient(
+            86.97deg,
+            rgba(255, 168, 0, 0.4) -0.67%,
+            rgba(25, 187, 125, 0.4) 24.91%,
+            rgba(0, 82, 204, 0.4) 48.82%,
+            rgba(69, 164, 236, 0.4) 72.18%,
+            rgba(184, 95, 255, 0.4) 88.31%
+        ),
+        rgb(7, 6, 36);
+    
+    .hero_banner_content{
+        &_left{
+            gap: 16px;
+            &_text{
+                gap: 16px;
+                h1{
+                    font-size: 4.5rem;
+                    line-height: 5.625rem;
+                    font-weight: bold;
+                    color: #fff;
+                    
+                    span{
+                        background: linear-gradient(90.05deg, rgb(181, 255, 211) 0.02%, rgb(209, 164, 255) 39.16%, rgb(255, 165, 175) 75.82%, rgb(255, 220, 164) 112%) text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+
+                h4{
+                    color: #fff;
+                    font-size: 20px;
+                }   
+            }
+
+            &_button{
+                gap: 16px;
+                button{
+                    color: #fff;   
+                    padding: 16px;
+                    background-color: rgb(173, 76, 248);
+                    border: none;
+                    border-radius: 5px;
+                    font-weight: bold;
+
+                    &:hover{
+                        background-color: rgb(115, 12, 194);
+                    }
+                }
+                a{
+                    color: #fff;
+                    
+                    &:hover{
+                        color: #ebe9e9;
+                    }
+                }
+            }
+        }
+            
+    }
+
+    .hero_banner_sponsor{
+        padding-top: 36px;
+        gap: 32px;
+        &_title{
+            color: #fff;
+            text-align: center;
+        }
+        &_list{
+            gap: 48px;   
+        }
+    }
+}
+
+.happy-customer{
+    background-color: #fff;
+    padding: 80px 64px;
+    gap: 32px;
+    &-title{
+        font-size: 4rem;
+        font-weight: bold;
+        line-height: 4.5rem;
+        text-align: center;
+    }
+
+    &-description{
+        font-size: 2rem;
+        text-align: center;
+        color: #707070;
+        line-height: 40px;
+    }
+
+    &-services{
+        gap: 32px;
+        &-btn{
+            border: 2px solid rgba(133, 18, 224, 0.5);
+            padding: 8px 16px;
+            border-radius: 5px;
+            background-color: #fff;
+            min-width: 164px;
+            font-weight: bold;
+            &:hover{
+                background-color: #3a3a3a;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.customer-feedback{
+    background-color: #fff;
+    padding: 80px 64px;
+
+    &-title{
+        font-size: 4rem;
+        font-weight: bold;
+        line-height: 4.5rem;
+        text-align: center;
+    }
+
+    &-card{
+        background-color: rgb(255, 224, 174);
+        padding: 48px;
+        border-radius: 8px;
+    }
+
+    &-desc{
+        font-size: 1.5rem;
+        line-height: 38px;
+    }
+
+    &-text{
+        gap: 28px;
+    }
+
+    &-info{
+        gap: 20px;
+    }
+
+    .customer-name{
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+
+    .customer-address{
+        font-size: 1.25rem;
+    }
+}
+
+.explore-container{
+    padding: 40px 0;
+    background-color: rgb(131, 250, 208);
+
+    .container{
+        gap: 30px;
+    }
+}
+
+
+.explore-left {
+    img {
+        width: 600px;
+        height: 620px;
+        
+    }
+}
+
+.explore-right{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    h5{
+        font: 500 1rem / 1.5rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        letter-spacing: 1.25px;
+        text-transform: uppercase;
+    }
+
+    h2{
+        font: 700 2.25rem / 2.75rem Roboto, "Helvetica Neue", "Arial Nova", sans-serif;
+        letter-spacing: -0.02em;
+    }
+
+    p{
+        font-size: 1.5rem;
+        line-height: 2.375rem;
+    }
+
+    button{
+        display: flex;
+        text-decoration: none;
+        transition: border linear;
+        background-color: transparent;
+        color: rgb(29, 32, 38);
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        padding: 8px 16px;
+        border-radius: 15px;
+        width: fit-content;
+
+        &:hover{
+            background-color: rgb(255, 255, 255);
+            color: rgb(29, 32, 38);
+            text-decoration: none;
+        }
+    }
+}
+
+
+.expert-advice{
+    padding: 60px 0;
+
+    h1{
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .expert-list{
+        padding-top: 40px;
+        gap: 80px;
+        img{
+            width: 200px;
+        }
+    }
+}
+
+.footer_heading{
+    font-size: 1.5rem;
+}
+
+footer{
+    padding: 40px 0;
+}
+
+a{
+    text-decoration: none;
+}

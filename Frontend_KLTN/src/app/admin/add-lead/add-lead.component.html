@@ -1,0 +1,46 @@
+<section class="new_ticket_container container mt-3 mb-3" style="background-color: #fff;">
+    <form class="form-control d-flex flex-column justify-content-center new_ticket_form w-100 border-0">
+        <h4 class="mb-2 mt-2">New Lead</h4>
+        <div class="form-group d-flex flex-column">
+            <label for="title">Title <span class="text-danger">(*)</span></label>
+            <input type="text" name="title" class="new_ticket_form__input w-75" [(ngModel)]="title">
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="description">Description<span class="text-danger">(*)</span></label>
+            <textarea name="description" id="description" cols="30" rows="10" style="resize: none;" class="w-75" [(ngModel)]="description"></textarea>
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="leadValue">Lead's value <span class="text-danger">(*)</span></label>
+            <input type="text" name="leadValue" class="new_ticket_form__input w-75" [(ngModel)]="leadValue">
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="status">Status <span class="text-danger">(*)</span></label>
+            <select name="status" class="new_ticket_form__input w-75" [(ngModel)]="status">
+                <option value="Success">Success</option>
+                <option value="Following">Following</option>
+                <option value="Fail">Fail</option>
+            </select>
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="name">Name <span class="text-danger">(*)</span></label>
+            <input type="text" name="name" class="new_ticket_form__input w-75" [(ngModel)]="name">
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="email">Email <span class="text-danger">(*)</span></label>
+            <input type="email" name="email" class="new_ticket_form__input w-75" [(ngModel)]="emails">
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="contactNumbers">Phone number <span class="text-danger">(*)</span></label>
+            <input type="text" name="contactNumbers" class="new_ticket_form__input w-75" [(ngModel)]="contactNumbers">
+        </div>
+
+        <div class="form-group d-flex flex-column">
+            <label for="lostReason">Lost reason <span class="text-danger">(*)</span></label>
+            <input type="text" name="lostReason" class="new_ticket_form__input w-75" [(ngModel)]="lostReason">
+        </div>        
+        <div class="form-group d-flex justify-content-start">
+            <button type="button" class="submit_new_ticket_btn" (click)="addLead()">Save</button>
+            <button class="cancel_new_ticket_btn" (click)="backToPreviousPage()">Cancel</button>
+        </div>
+    </form>
+</section>

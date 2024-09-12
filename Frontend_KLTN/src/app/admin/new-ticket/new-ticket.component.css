@@ -1,0 +1,58 @@
+.new_ticket_container h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.new_ticket_container input,
+.new_ticket_container select,
+.new_ticket_container textarea {
+  padding-left: 8px;
+  border: none;
+  border-radius: 5px;
+  outline: 1px solid #ccc;
+}
+.new_ticket_container input:focus, .new_ticket_container input:focus-visible, .new_ticket_container input:focus-within,
+.new_ticket_container select:focus,
+.new_ticket_container select:focus-visible,
+.new_ticket_container select:focus-within,
+.new_ticket_container textarea:focus,
+.new_ticket_container textarea:focus-visible,
+.new_ticket_container textarea:focus-within {
+  outline: 2px solid rgb(88, 125, 255);
+}
+.new_ticket_container input,
+.new_ticket_container select {
+  height: 32px;
+}
+.new_ticket_container .form-control {
+  padding: 8px 20px;
+}
+.new_ticket_container .form-group {
+  gap: 8px;
+}
+.new_ticket_container select {
+  border-right: 8px solid transparent;
+}
+.new_ticket_container .new_ticket_form {
+  gap: 16px;
+}
+.new_ticket_container .submit_new_ticket_btn,
+.new_ticket_container .cancel_new_ticket_btn {
+  padding: 4px 16px;
+  border: none;
+  border-radius: 5px;
+}
+.new_ticket_container .submit_new_ticket_btn {
+  background-color: #043688;
+  color: #fff;
+}
+.new_ticket_container .submit_new_ticket_btn:hover {
+  background-color: #022968;
+}
+.new_ticket_container .cancel_new_ticket_btn {
+  background-color: #fff;
+  color: #333;
+  outline: 1px solid #ccc;
+}
+.new_ticket_container .cancel_new_ticket_btn:hover {
+  background-color: #939495;
+}/*# sourceMappingURL=new-ticket.component.css.map */

@@ -1,0 +1,24 @@
+<section class="new_ticket_container container mt-3 mb-3" style="background-color: #fff;">
+    <form class="form-control d-flex flex-column justify-content-center new_ticket_form w-100 border-0">
+        <h4 class="mb-2 mt-2">New Youtube Video</h4>
+        <div class="form-group d-flex flex-column">
+            <label for="title">Title <span class="text-danger">(*)</span></label>
+            <input type="text" name="title" class="new_ticket_form__input w-75" [(ngModel)]="title">
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="description">Description <span class="text-danger">(*)</span></label>
+            <textarea type="text" name="description" class="new_ticket_form__input w-75" rows="7" cols="50" [(ngModel)]="description"></textarea>
+        </div>
+        <div class="form-group d-flex flex-column">
+            <input style="outline: none;padding-left: 0;" type="file" (change)="onVideoChange($event)" accept="video/*" #videoFile>
+            <div *ngIf="imageError" class="error-message">
+                Something went wrong
+            </div>
+        </div>
+        
+        <div class="form-group d-flex justify-content-start">
+            <button type="button" class="submit_new_ticket_btn" (click)="postVideo()">Post</button>
+            <button class="cancel_new_ticket_btn" (click)="closeModal()">Cancel</button>
+        </div>
+    </form>
+</section>

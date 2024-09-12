@@ -1,0 +1,66 @@
+.new_ticket_container{
+    h4{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    input,
+    select,
+    textarea{
+        width: 100%!important;
+        padding-left: 8px;
+        border: none;
+        border-radius: 5px;
+        outline: 1px solid #ccc;
+
+        &:focus,
+        &:focus-visible,
+        &:focus-within{
+            outline: 2px solid rgb(88, 125, 255);
+        }
+    }
+    input,
+    select{
+        height: 32px;
+    }
+    
+    .form-control{
+        padding: 8px 20px;
+    }
+
+    .form-group{
+        gap: 8px;
+    }
+
+    select{
+        border-right: 8px solid transparent;
+    }
+
+    .new_ticket_form{
+        gap: 16px;
+    }
+
+    .submit_new_ticket_btn,
+    .cancel_new_ticket_btn{
+        padding: 4px 16px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .submit_new_ticket_btn{
+        background-color: #043688;
+        color: #fff;
+        
+        &:hover{
+            background-color: #022968;
+        }
+    }
+    .cancel_new_ticket_btn{
+        background-color: #fff;
+        color: #333;
+        outline: 1px solid #ccc;
+        &:hover{
+            background-color: #939495;
+        }
+    }
+}

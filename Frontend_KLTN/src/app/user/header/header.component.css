@@ -1,0 +1,28 @@
+.header {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 16px 24px;
+  box-shadow: 0 1px 2px 1px #35b9c3;
+  z-index: 2;
+  background-color: #fff;
+}
+.header__left {
+  gap: 12px;
+  color: #333;
+}
+.header__left p {
+  font-size: 24px;
+}
+.header__right {
+  gap: 16px;
+}
+.header__right a {
+  color: #333;
+  font-size: 18px;
+}
+.header a {
+  transition: all 0.2s ease-in-out;
+}
+.header a:hover {
+  color: rgb(43, 86, 195);
+}/*# sourceMappingURL=header.component.css.map */

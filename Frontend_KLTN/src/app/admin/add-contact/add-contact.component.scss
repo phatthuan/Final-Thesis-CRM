@@ -1,0 +1,19 @@
+@import url("../new-ticket/new-ticket.component.scss");
+.new_ticket{
+    &_container{
+        border-radius: 8px;
+        box-shadow: 0 4px 10px 0 #85858599;
+        h4{
+            font-size: 28px;
+        }
+
+        .form-control{
+            padding: 24px!important;
+        }
+    
+        .submit_new_ticket_btn,
+        .cancel_new_ticket_btn{
+            width: 25%;
+        }
+    }
+}

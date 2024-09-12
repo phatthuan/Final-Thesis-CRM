@@ -1,0 +1,337 @@
+<section class="index_container">
+  <div class="hero_banner_container py-5 px-0">
+    <div class="hero_banner_content container">
+      <div class="row d-flex justify-content-between">
+        <div
+          class="hero_banner_content_left col-12 col-md-6 d-flex flex-column align-items-start justify-content-center flex-grow-1"
+        >
+          <div
+            class="hero_banner_content_left_text d-flex flex-column align-items-start justify-content-center"
+          >
+            <h1>Same easy software. <span>New AI superpowers.</span></h1>
+            <h4>
+              Customer service, IT, and CRM software that’s powerful yet easy to
+              use. Now supercharged with generative AI.
+            </h4>
+          </div>
+          <div
+            class="hero_banner_content_left_button d-flex justify-content-left align-items-center"
+          >
+            <button>Try it free</button>
+            <a href="#" class="text-decoration-none">Demo</a>
+          </div>
+        </div>
+        <div class="hero_banner_content_right col-12 col-md-6">
+          <img src="../../../assets/hero.jpg" alt="" width="100%" />
+        </div>
+      </div>
+    </div>
+    <div
+      class="hero_banner_sponsor d-flex flex-column justify-content-center align-items-center"
+    >
+      <h4 class="hero_banner_sponsor_title">
+        TRUSTED BY 60,000+ BUSINESSES OF ALL SIZES
+      </h4>
+      <div class="hero_banner_sponsor_list d-flex justify-content-center">
+        <img
+          src="../../../assets/logo-1.jpg"
+          alt=""
+          width="150px"
+          height="100px"
+        />
+        <img
+          src="../../../assets/logo-2.jpg"
+          alt=""
+          width="150px"
+          height="100px"
+        />
+        <img
+          src="../../../assets/logo-3.jpg"
+          alt=""
+          width="150px"
+          height="100px"
+        />
+        <img
+          src="../../../assets/logo-4.jpg"
+          alt=""
+          width="150px"
+          height="100px"
+        />
+        <img
+          src="../../../assets/logo-5.jpg"
+          alt=""
+          width="150px"
+          height="100px"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+<section class="happy-customer d-flex flex-column align-items-center container">
+  <p class="happy-customer-title">
+    Happy customers. Energized employees. That's impact.
+  </p>
+  <p class="happy-customer-description">
+    Choose one. Or all. You'll see better customer relationships and happier
+    employees—without the bloat, hassle, and expense of typical business
+    software
+  </p>
+  <div class="happy-customer-services d-flex flex-column flex-lg-row">
+    <button
+      class="happy-customer-services-btn"
+      (mouseover)="changeImageA()"
+    >
+      Customer Services
+    </button>
+    <button class="happy-customer-services-btn" (mouseover)="changeImageB()" (click)="redirect('/home')">
+      IT Services
+    </button>
+    <button class="happy-customer-services-btn" (mouseover)="changeImageC()" (click)="redirect('/admin/crm/login')">
+      CRM
+    </button>
+  </div>
+  <div class="happy-customer-img">
+    <img [src]="currentImageLink" alt="" width="100%" />
+  </div>
+</section>
+
+<section class="customer-feedback container">
+  <p class="customer-feedback-title">What Our Customers Say ?</p>
+
+  <div class="customer-feedback-card container-fluid mt-5">
+    <div class="row">
+      <div
+        class="col-12 col-lg-8 customer-feedback-text d-flex flex-column align-items-start justify-content-center"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="50"
+          height="42"
+          stroke="black"
+          class="sc-ac2d5493-1 gUUSDz"
+        >
+          <defs>
+            <clipPath id="quote_svg__a">
+              <path d="M.383 0h49.234v41.375H.383zm0 0"></path>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#quote_svg__a)">
+            <path
+              d="M39.594 41.375c5.77 0 9.703-3.836 9.703-9.23 0-5.153-3.8-8.75-9.176-8.75a9.529 9.529 0 00-3.457.699c.613-7.774 4.953-13.809 12.148-18.016a1.533 1.533 0 00.582-2.137L47.525.84a1.873 1.873 0 00-2.446-.625C34.242 5.859 27.797 15.438 27.797 26.87c0 9.11 4.98 14.504 11.797 14.504zm-27.41 0c5.765 0 9.699-3.836 9.699-9.23 0-5.153-3.801-8.75-9.176-8.75a9.529 9.529 0 00-3.457.699c.617-7.774 4.953-13.809 12.148-18.016a1.535 1.535 0 00.582-2.137L20.113.84a1.882 1.882 0 00-2.449-.625C6.828 5.859.383 15.438.383 26.87c0 9.11 4.984 14.504 11.8 14.504zm0 0"
+              fill="#1d2026"
+            ></path>
+          </g>
+        </svg>
+        <p class="customer-feedback-desc m-0">
+          Reducing our no-show rate was important to have higher utilization of
+          our sales team. With Phat's service, we brought it down to about 20%,
+          and time is money.
+        </p>
+        <div
+          class="customer-feedback-info d-flex flex-column align-items-start justify-content-center"
+        >
+          <p class="customer-name m-0">Pasal Tran</p>
+          <p class="customer-address m-0">
+            Senior Developer, Orient Software Group
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 customer-feedback-image">
+        <img src="../../../assets/feedback-1.jpg" alt="" width="100%" />
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="customer-feedback-card container-fluid mt-5"
+    style="background-color: rgb(182, 228, 241)"
+  >
+    <div class="row">
+      <div class="col-12 col-lg-4 customer-feedback-image">
+        <img src="../../../assets/feedback-2.jpg" alt="" width="100%" />
+      </div>
+      <div
+        class="col-12 col-lg-8 customer-feedback-text d-flex flex-column align-items-start justify-content-center"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="50"
+          height="42"
+          stroke="black"
+          class="sc-ac2d5493-1 gUUSDz"
+        >
+          <defs>
+            <clipPath id="quote_svg__a">
+              <path d="M.383 0h49.234v41.375H.383zm0 0"></path>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#quote_svg__a)">
+            <path
+              d="M39.594 41.375c5.77 0 9.703-3.836 9.703-9.23 0-5.153-3.8-8.75-9.176-8.75a9.529 9.529 0 00-3.457.699c.613-7.774 4.953-13.809 12.148-18.016a1.533 1.533 0 00.582-2.137L47.525.84a1.873 1.873 0 00-2.446-.625C34.242 5.859 27.797 15.438 27.797 26.87c0 9.11 4.98 14.504 11.797 14.504zm-27.41 0c5.765 0 9.699-3.836 9.699-9.23 0-5.153-3.801-8.75-9.176-8.75a9.529 9.529 0 00-3.457.699c.617-7.774 4.953-13.809 12.148-18.016a1.535 1.535 0 00.582-2.137L20.113.84a1.882 1.882 0 00-2.449-.625C6.828 5.859.383 15.438.383 26.87c0 9.11 4.984 14.504 11.8 14.504zm0 0"
+              fill="#1d2026"
+            ></path>
+          </g>
+        </svg>
+        <p class="customer-feedback-desc m-0">
+          Over the last year, we've acquired 10X more customers and are rapidly
+          scaling. To our surprise and relief, through this busy phase, the time
+          spent on administrative tasks by teams dropped by 20%.
+        </p>
+        <div
+          class="customer-feedback-info d-flex flex-column align-items-start justify-content-center"
+        >
+          <p class="customer-name m-0">Alexsandra minota</p>
+          <p class="customer-address m-0">
+            Senior Software Engineer, Terisa Software Group
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="customer-feedback-card container-fluid mt-5"
+    style="background-color: rgb(83, 203, 137)"
+  >
+    <div class="row">
+      <div
+        class="col-12 col-lg-8 customer-feedback-text d-flex flex-column align-items-start justify-content-center"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="50"
+          height="42"
+          stroke="black"
+          class="sc-ac2d5493-1 gUUSDz"
+        >
+          <defs>
+            <clipPath id="quote_svg__a">
+              <path d="M.383 0h49.234v41.375H.383zm0 0"></path>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#quote_svg__a)">
+            <path
+              d="M39.594 41.375c5.77 0 9.703-3.836 9.703-9.23 0-5.153-3.8-8.75-9.176-8.75a9.529 9.529 0 00-3.457.699c.613-7.774 4.953-13.809 12.148-18.016a1.533 1.533 0 00.582-2.137L47.525.84a1.873 1.873 0 00-2.446-.625C34.242 5.859 27.797 15.438 27.797 26.87c0 9.11 4.98 14.504 11.797 14.504zm-27.41 0c5.765 0 9.699-3.836 9.699-9.23 0-5.153-3.801-8.75-9.176-8.75a9.529 9.529 0 00-3.457.699c.617-7.774 4.953-13.809 12.148-18.016a1.535 1.535 0 00.582-2.137L20.113.84a1.882 1.882 0 00-2.449-.625C6.828 5.859.383 15.438.383 26.87c0 9.11 4.984 14.504 11.8 14.504zm0 0"
+              fill="#1d2026"
+            ></path>
+          </g>
+        </svg>
+        <p class="customer-feedback-desc m-0">
+          Reducing our no-show rate was important to have higher utilization of
+          our sales team. With Phat's service, we brought it down to about 20%,
+          and time is money.
+        </p>
+        <div
+          class="customer-feedback-info d-flex flex-column align-items-start justify-content-center"
+        >
+          <p class="customer-name m-0">Alex Janro</p>
+          <p class="customer-address m-0">Cloud architect, Software Group</p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 customer-feedback-image">
+        <img src="../../../assets/feedback-3.jpg" alt="" width="100%" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="explore-container">
+  <div class="container d-flex align-items-center">
+    <div class="explore-left">
+      <img src="../../../assets/Sales.jpg" alt="" />
+    </div>
+    <div class="explore-right">
+      <h5>PHAT CRM System</h5>
+      <h2>Get sales and marketing on the same page</h2>
+      <p>
+        Bring everything together in one complete CRM solution with a single
+        source of truth for each customer's journey. Share context, customize
+        communications, and drive revenue together.
+      </p>
+      <button>Explore PHAT's CRM</button>
+    </div>
+  </div>
+</section>
+
+<section class="expert-advice">
+  <div class="container text-center">
+    <h1>Recommended by leading industry experts</h1>
+    <div class="expert-list d-flex w-100 justify-content-center">
+      <img src="../../../assets/expert-1.jpg" alt="" />
+      <img src="../../../assets/expert-2.jpg" alt="" />
+      <img src="../../../assets/expert-3.jpg" alt="" />
+    </div>
+  </div>
+</section>
+
+<footer
+  class="text-center text-lg-start text-white"
+  style="background-color: #45526e"
+>
+  <div class="container">
+    <div class="container p-4 pb-0">
+      <div class="">
+        <div class="row">
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase footer_heading mb-4 font-weight-bold">Phat's Group</h6>
+            <p>
+              Our group has two members that are responsible for this website implementation.
+            </p>
+          </div>
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase footer_heading mb-4 font-weight-bold">Products</h6>
+            <p>
+              <a class="text-white" href="#">IT-Services</a>
+            </p>
+            <p>
+              <a class="text-white" href="#">CRM System</a>
+            </p>
+          </div>
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase footer_heading mb-4 font-weight-bold">Support</h6>
+            <p>
+              <a class="text-white" href="#">Your Account</a>
+            </p>
+            <p>
+              <a class="text-white" href="#">Book A Demo</a>
+            </p>
+            <p>
+              <a class="text-white" href="#">Customer Service</a>
+            </p>
+            <p>
+              <a class="text-white" href="#">Help Center</a>
+            </p>
+          </div>
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase footer_heading mb-4 font-weight-bold">Contact</h6>
+            <p><i class="fas fa-home mr-3"></i> District 7 Ho Chi Minh city, VN</p>
+            <p><i class="fas fa-envelope mr-3"></i> 52000699&#64;student.tdtu.edu.vn</p>
+            <p><i class="fas fa-envelope mr-3"></i> 52000853&#64;student.tdtu.edu.vn</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-3" />
+
+      <div class="p-3 pt-0">
+        <div class="row d-flex align-items-center">
+          <div class="p-3">
+            © 2024 Copyright: 
+            <span a class="text-white" href="#"
+              >KLTN - Gia Phat - Thuan Phat</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

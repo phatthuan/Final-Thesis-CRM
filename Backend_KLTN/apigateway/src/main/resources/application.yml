@@ -1,0 +1,80 @@
+server:
+  port: 9000
+  
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: userservice
+          uri: http://localhost:9001
+          predicates:
+            - Path=/api/v1/users/**
+        - id: contactservice
+          uri: http://localhost:9002
+          predicates:
+            - Path=/api/v1/contacts/**
+          filters:
+            - AuthFilter
+        - id: ticketservice
+          uri: http://localhost:9003
+          predicates:
+            - Path=/api/v1/tickets/**
+          filters:
+            - AuthFilter
+        - id: leadservice
+          uri: http://localhost:9004
+          predicates:
+            - Path=/api/v1/leads/**
+          filters:
+            - AuthFilter
+        - id: productservice
+          uri: http://localhost:9005
+          predicates:
+            - Path=/api/v1/products/**
+          filters:
+            - AuthFilter
+        - id: productservice
+          uri: http://localhost:9006
+          predicates:
+            - Path=/api/v1/persons/**
+          filters:
+            - AuthFilter
+        - id: quoteservice
+          uri: http://localhost:9007
+          predicates:
+            - Path=/api/v1/quotes/**
+          filters:
+            - AuthFilter
+        - id: activityservice
+          uri: http://localhost:9008
+          predicates:
+            - Path=/api/v1/activities/**
+          filters:
+            - AuthFilter
+        - id: notificationservice
+          uri: http://localhost:9009
+          predicates:
+            - Path=/api/v1/notifications/**
+          filters:
+            - AuthFilter
+        - id: imageservice
+          uri: http://localhost:9010
+          predicates:
+            - Path=/api/v1/images/**
+          filters:
+            - AuthFilter
+        - id: VNPay
+          uri: http://localhost:9007
+          predicates:
+            - Path=/api/VNPay/**
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+              allowedOrigins: "*"
+              allowedMethods: "*"
+              allowedHeaders: "*"
+

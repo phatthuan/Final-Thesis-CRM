@@ -1,0 +1,36 @@
+<section class="new_ticket_container container mt-3 mb-3" style="background-color: #fff;">
+    <form class="form-control d-flex flex-column justify-content-center new_ticket_form w-100 border-0">
+        <h4 class="mb-2 mt-2">New User</h4>
+        <div class="form-group d-flex flex-column">
+            <label for="first_name">First name <span class="text-danger">(*)</span></label>
+            <input type="text" name="first_name" class="new_ticket_form__input w-75" [(ngModel)]="first_name">
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="last_name">Last name <span class="text-danger">(*)</span></label>
+            <input type="text" name="last_name" class="new_ticket_form__input w-75" [(ngModel)]="last_name">
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="email">Email <span class="text-danger">(*)</span></label>
+            <input type="text" name="email" class="new_ticket_form__input w-75" [(ngModel)]="email">
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="phoneNumber">Phone <span class="text-danger">(*)</span></label>
+            <input type="text" name="phoneNumber" class="new_ticket_form__input w-75" [(ngModel)]="phoneNumber">
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="role">Role <span class="text-danger">(*)</span></label>
+            <input type="text" name="role" class="new_ticket_form__input w-75" [(ngModel)]="role">
+        </div>
+        <div class="form-group d-flex flex-column">
+            <input style="outline: none;" type="file" (change)="onImageChange($event)" accept="image/*" #imageFile>
+            <div *ngIf="imageError" class="error-message">
+                Image size cannot exceed 10MB. Please choose a smaller image.
+            </div>
+        </div>
+        
+        <div class="form-group d-flex justify-content-start">
+            <button type="button" class="submit_new_ticket_btn" (click)="addContact()">Save</button>
+            <button class="cancel_new_ticket_btn" (click)="backToPreviousPage()">Cancel</button>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,44 @@
+<section class="signup_component w-100 d-flex justify-content-center align-items-center py-5">
+    <div class="signup_component__container d-flex justify-content-start">
+        <div class="signup_component_text flex-grow-1 d-flex flex-column justify-content-between">
+            Explore more softwares and others at our website.
+            <div class="signup_component_image login_image">
+                <img src="../../../assets/signup.png" height="400px" width="600px">
+            </div>
+        </div>
+        <form class="form-control d-flex flex-column justify-content-center signup_component__form" #loginform="ngForm" (ngSubmit)="onLoginUser(loginform)">
+            <h4>Sign in account</h4>
+            <div class="form-group d-flex flex-column justify-content-center" #inputDiv1>
+                <div class="form-label m-0">
+                    <p aria-required="true" class="form-label-text">Email</p>
+                </div>
+                <div class="form_input_container w-100 d-flex align-items-center">
+                    <fa-icon [icon]="['fas','envelope']" class="form_icon"></fa-icon>
+                    <input type="text" name="email" id="email"
+                        class="signup_component__form__input input w-100" #inputField1 ngModel>
+                </div>
+            </div>
+            <p *ngIf="error.length > 0 && error[0].type ==='email' " class="error-text">{{error[0].message}}</p>
+            <div class="form-group d-flex flex-column justify-content-center" #inputDiv2>
+                <div class="form-label m-0">
+                    <p aria-required="true" class="form-label-text">Password</p>
+                </div>
+                <div class="form_input_container w-100 d-flex align-items-center">
+                    <fa-icon [icon]="['fas','lock']" class="form_icon"></fa-icon>
+                    <input type="password" name="password" id="password"
+                        class="signup_component__form__input input w-100" #inputField2 ngModel>
+                </div>
+            </div>
+            <p *ngIf="error.length > 0 && error[0].type ==='password' " class="error-text">{{error[0].message}}</p>
+            <p *ngIf="error.length > 0 && error[0].type ==='login' " class="error-text">{{error[0].message}}</p>
+            <div class=" d-flex mt-3">
+                <button type="submit"
+                    class="w-100 signup_component__btn_submit outline-none border-none">Login</button>
+            </div>
+            <div class="already_account d-flex">
+                <p>Doesn't have an account?</p>
+                <a href="/home/signup">Sign up</a>
+            </div>
+        </form>
+    </div>
+</section>

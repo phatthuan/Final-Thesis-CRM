@@ -1,0 +1,15 @@
+@import url("../new-ticket/new-ticket.component.scss");
+.new_ticket_container {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px 0 rgba(133, 133, 133, 0.6);
+}
+.new_ticket_container h4 {
+  font-size: 28px;
+}
+.new_ticket_container .form-control {
+  padding: 24px !important;
+}
+.new_ticket_container .submit_new_ticket_btn,
+.new_ticket_container .cancel_new_ticket_btn {
+  width: 25%;
+}/*# sourceMappingURL=add-contact.component.css.map */

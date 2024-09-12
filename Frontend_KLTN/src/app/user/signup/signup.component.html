@@ -1,0 +1,109 @@
+<section class="signup_component w-100 d-flex justify-content-center align-items-center py-5">
+    <div class="signup_component__container d-flex justify-content-end">
+        <div class="signup_component_text flex-grow-1 d-flex flex-column justify-content-between">
+            Find IT services, software services and others at our website.
+            <div class="signup_component_image">
+                <img src="../../../assets/signup3.png">
+            </div>
+            <div class="logo d-flex justify-content-center align-items-center">
+                <a class="github" href="#">
+                    <img src="../../../assets/signup2.png" width="80px" height="80px">
+                </a>
+                <a class="linkedin" href="#">
+                    <img src="../../../assets/linkedin.png" width="80px" height="80px">
+                </a>
+                <a class="gmail" href="#">
+                    <img src="../../../assets/gmail.png" width="80px" height="80px">
+                </a>
+            </div>
+        </div>
+        <form class="form-control d-flex flex-column justify-content-center signup_component__form" #signupform="ngForm"
+            (ngSubmit)="onCreateUser(signupform)">
+            <h4>Create account</h4>
+            <div class="form-group d-flex flex-column justify-content-center" #inputDiv1>
+                <div class="form-label m-0">
+                    <p aria-required="true" class="form-label-text">First name</p>
+                </div>
+                <div class="form_input_container w-100 d-flex align-items-center">
+                    <fa-icon [icon]="['fas','book']" class="form_icon"></fa-icon>
+                    <input type="text" name="first_name" id="first_name"
+                        class="signup_component__form__input input w-100" #inputField1 ngModel>
+                </div>
+            </div>
+            <p *ngIf="error.length > 0 && error[0].type ==='firstname' " class="error-text">{{error[0].message}}</p>
+            <div class="form-group d-flex flex-column justify-content-center" #inputDiv2>
+                <div class="form-label m-0">
+                    <p aria-required="true" class="form-label-text">Last name</p>
+                </div>
+                <div class="form_input_container w-100 d-flex align-items-center">
+                    <fa-icon [icon]="['fas','book']" class="form_icon"></fa-icon>
+                    <input type="text" name="last_name" id="last_name"
+                        class="signup_component__form__input input w-100" #inputField2 ngModel>
+                </div>
+            </div>
+            <p *ngIf="error.length > 0 && error[0].type ==='lastname' " class="error-text">{{error[0].message}}</p>
+            <div class="form-group d-flex flex-column justify-content-center" #inputDiv3>
+                <div class="form-label m-0">
+                    <p aria-required="true" class="form-label-text">Username</p>
+                </div>
+                <div class="form_input_container w-100 d-flex align-items-center">
+                    <fa-icon [icon]="['fas','user']" class="form_icon"></fa-icon>
+                    <input type="text" name="user_name" id="user_name"
+                        class="signup_component__form__input input w-100" #inputField3 ngModel>
+                </div>
+            </div>
+            <div class="form-group d-flex flex-column justify-content-center" #inputDiv4>
+                <div class="form-label m-0">
+                    <p aria-required="true" class="form-label-text">Email</p>
+                </div>
+                <div class="form_input_container w-100 d-flex align-items-center">
+                    <fa-icon [icon]="['fas','envelope']" class="form_icon"></fa-icon>
+                    <input type="text" name="email" id="email"
+                        class="signup_component__form__input input w-100" #inputField4 ngModel>
+                </div>
+            </div>
+            <p *ngIf="error.length > 0 && error[0].type ==='email' " class="error-text">{{error[0].message}}</p>
+            <div class="form-group d-flex flex-column justify-content-center" #inputDiv5>
+                <div class="form-label m-0">
+                    <p aria-required="true" class="form-label-text">Password</p>
+                </div>
+                <div class="form_input_container w-100 d-flex align-items-center">
+                    <fa-icon [icon]="['fas','lock']" class="form_icon"></fa-icon>
+                    <input type="password" name="password" id="password"
+                        class="signup_component__form__input input w-100" #inputField5 ngModel>
+                </div>
+            </div>
+            <p *ngIf="error.length > 0 && error[0].type ==='password' " class="error-text">{{error[0].message}}</p>
+            <div class="form-group d-flex flex-column justify-content-center" #inputDiv6>
+                <div class="form-label m-0">
+                    <p aria-required="true" class="form-label-text">Confirm password</p>
+                </div>
+                <div class="form_input_container w-100 d-flex align-items-center">
+                    <fa-icon [icon]="['fas','lock']" class="form_icon"></fa-icon>
+                    <input type="password" name="confirm_password" id="confirm_password"
+                        class="signup_component__form__input input w-100" #inputField6 ngModel>
+                </div>
+            </div>
+            <p *ngIf="error.length > 0 && error[0].type ==='confirm_password' " class="error-text">{{error[0].message}}</p>
+            <div class="form-group d-flex flex-column justify-content-center" #inputDiv7>
+                <div class="form-label m-0">
+                    <p aria-required="true" class="form-label-text">Phone</p>
+                </div>
+                <div class="form_input_container w-100 d-flex align-items-center">
+                    <fa-icon [icon]="['fas','phone']" class="form_icon"></fa-icon>
+                    <input type="phone" name="phone" id="phone"
+                        class="signup_component__form__input input w-100" #inputField7 ngModel>
+                </div>
+            </div>
+            <p *ngIf="error.length > 0 && error[0].type ==='phone' " class="error-text">{{error[0].message}}</p>
+            <div class=" d-flex mt-3">
+                <button type="submit"
+                    class="w-100 signup_component__btn_submit outline-none border-none">Create account</button>
+            </div>
+            <div class="already_account d-flex">
+                <p>Already have an account?</p>
+                <a href="/home/login">Log in</a>
+            </div>
+        </form>
+    </div>
+</section>

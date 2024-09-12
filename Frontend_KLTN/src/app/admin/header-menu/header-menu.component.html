@@ -1,0 +1,83 @@
+<mat-toolbar class="topbar">
+  <button mat-icon-button (click)="toggleMobileNav.emit()" *ngIf="!showToggle">
+    <i-tabler name="menu-2" class="icon-20 d-flex"></i-tabler>
+  </button>
+
+  <div class="notification-container" [class.active]="isDropdownVisible">
+    <button mat-icon-button aria-label="Notifications" (click)="toggleDropdown()">
+      <i-tabler
+        class="d-flex"
+        name="bell"
+        matBadge="{{notifications.length}}"
+        matBadgeColor="primary"
+      ></i-tabler>
+    </button>
+    <div class="notification-dropdown" *ngIf="isDropdownVisible">
+      <div
+        class="notification-item"
+        *ngFor="let notification of displayedNotifications; let i = index; trackBy: trackByFn"
+      >
+        <div class="d-flex justify-content-between align-items-center">
+          <p>{{ notification.title }}</p>
+          <p style="font-weight: 400;font-size: 12px;">{{ getTimeDifference(notification.updatedAt) }}</p>
+        </div>
+        <small style="font-weight: 400;font-size: 16px;">{{ notification.description }}</small>
+      </div>
+      <div class="no-notifications" *ngIf="displayedNotifications.length === 0">
+        No notifications
+      </div>
+      <button
+        *ngIf="hasMoreNotifications"
+        #loadMoreButton
+        class="load-more"
+        (click)="loadMore()"
+      >
+        Load more
+      </button>
+    </div>
+  </div>
+
+  <span class="flex-1-auto text-right mx-4">Welcome, Admin</span>
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="profilemenu"
+    aria-label="Notifications"
+  >
+    <img
+      src="/assets/admin.jpg"
+      class="rounded-circle object-cover"
+      width="35"
+    />
+  </button>
+  <mat-menu #profilemenu="matMenu" class="topbar-dd cardWithShadow">
+    <button mat-menu-item>
+      <mat-icon class="d-flex align-items-center"
+        ><i-tabler name="user" class="icon-18 d-flex"></i-tabler></mat-icon
+      >My Profile
+    </button>
+    <button mat-menu-item>
+      <mat-icon class="d-flex align-items-center"
+        ><i-tabler name="mail" class="icon-18 d-flex"></i-tabler></mat-icon
+      >My Account
+    </button>
+    <button mat-menu-item>
+      <mat-icon class="d-flex align-items-center"
+        ><i-tabler
+          name="list-check"
+          class="icon-18 d-flex"
+        ></i-tabler></mat-icon
+      >My Task
+    </button>
+
+    <div class="p-x-12 m-t-12">
+      <a
+        [routerLink]="['/admin/', pageType, 'login']"
+        mat-stroked-button
+        color="primary"
+        class="w-100"
+        (click) = "logout()"
+        >Logout</a
+      >
+    </div>
+  </mat-menu>
+</mat-toolbar>

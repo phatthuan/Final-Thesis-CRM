@@ -1,0 +1,51 @@
+.tickets_container table {
+  box-shadow: 0 4px 10px 0 #ccc;
+}
+.tickets_container table th,
+.tickets_container table td {
+  padding: 16px;
+}
+.tickets_container table tr {
+  border-bottom: 1px solid #eaeaea;
+}
+.tickets_container table tr a {
+  text-decoration: none;
+  color: #333;
+}
+.tickets_container table tr:hover {
+  cursor: pointer;
+}
+.tickets_container table tr:hover td:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.tickets_container table tr:hover td:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.tickets_container table tr:hover td {
+  background-color: #ede9e9;
+}
+.tickets_container table tr:hover td a {
+  color: rgb(107, 107, 242);
+}
+.tickets_container table thead {
+  background-color: #ede9e9;
+  border-radius: 8px;
+}
+.tickets_container table thead th:first-child {
+  border-top-left-radius: 5px;
+}
+.tickets_container table thead th:last-child {
+  border-top-right-radius: 5px;
+}
+.tickets_container .export_table button {
+  background-color: #fff;
+  padding: 4px 16px;
+  border: none;
+  outline: 1px solid #ccc;
+  border-radius: 4px;
+}
+.tickets_container .export_table button:hover {
+  background-color: #ede9e9;
+}/*# sourceMappingURL=tickets.component.css.map */

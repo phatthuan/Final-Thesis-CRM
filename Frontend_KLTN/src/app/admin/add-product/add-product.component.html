@@ -1,0 +1,31 @@
+<section class="new_ticket_container container mt-3 mb-3" style="background-color: #fff;">
+    <form class="form-control d-flex flex-column justify-content-center new_ticket_form w-100 border-0">
+        <h4 class="mb-2 mt-2">New Product</h4>
+        <div class="form-group d-flex flex-column">
+            <label for="name">Name <span class="text-danger">(*)</span></label>
+            <input type="text" name="name" class="new_ticket_form__input w-75" [(ngModel)]="name">
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="price">Price <span class="text-danger">(*)</span></label>
+            <input type="text" name="price" class="new_ticket_form__input w-75" [(ngModel)]="price">
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="quantity">Quantity <span class="text-danger">(*)</span></label>
+            <input type="text" name="quantity" class="new_ticket_form__input w-75" [(ngModel)]="quantity">
+        </div>
+        <div class="form-group d-flex flex-column">
+            <input style="outline: none;" type="file" (change)="onImageChange($event)" accept="image/*" #imageFile>
+            <div *ngIf="imageError" class="error-message">
+                Image size cannot exceed 10MB. Please choose a smaller image.
+            </div>
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="description">Description<span class="text-danger">(*)</span></label>
+            <textarea name="description" id="description" cols="30" rows="10" style="resize: none;" class="w-75" [(ngModel)]="description"></textarea>
+        </div>
+        <div class="form-group d-flex justify-content-start">
+            <button type="button" class="submit_new_ticket_btn" (click)="addProduct()">Save</button>
+            <button class="cancel_new_ticket_btn" (click)="backToPreviousPage()">Cancel</button>
+        </div>
+    </form>
+</section>

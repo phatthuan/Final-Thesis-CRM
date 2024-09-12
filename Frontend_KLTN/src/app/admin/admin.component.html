@@ -1,0 +1,32 @@
+<mat-sidenav-container
+  class="mainWrapper blue_theme  light-theme"
+  autosize
+  autoFocus
+  dir="ltr"
+>
+  <mat-sidenav
+    #leftsidenav
+    [mode]="isOver ? 'over' : 'side'"
+    [opened]="!isOver"
+    (openedChange)="onSidenavOpenedChange($event)"
+    (closedStart)="onSidenavClosedStart()"
+    class="sidebarNav"
+  >
+    <app-sidebar [pageType]="pageType"></app-sidebar>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="contentWrapper">
+
+
+    <app-header-menu
+      [showToggle]="!isOver"
+      (toggleCollapsed)="toggleCollapsed()"
+      (toggleMobileNav)="sidenav.toggle()"
+      [pageType]="pageType"
+    ></app-header-menu>
+
+    <main class="pageWrapper">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
